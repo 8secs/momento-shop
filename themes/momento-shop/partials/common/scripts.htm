@@ -1,0 +1,25 @@
+description = "All javascript theme"
+
+[viewBag]
+==
+<!-- Scripts -->
+
+<script src="{{ [
+    'assets/js/jquery.js',
+    'assets/js/bootstrap.min.js',
+]|theme }}"></script>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+
+<script>
+   /* $(window).on('scroll', function(){
+        if( $(window).scrollTop()>670 ){
+            $('.navbar-default').addClass('navbar-fixed-top');
+        } else {
+            $('.navbar-default').removeClass('navbar-fixed-top');
+        }
+    });*/
+</script>
+
+{% framework extras %}
+{% scripts %}

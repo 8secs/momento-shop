@@ -1,0 +1,42 @@
+description = "Shop Layout"
+
+[session]
+security = "all"
+
+[resetPassword]
+paramCode = "code"
+
+[ShopBasket]
+checkoutPage = "/checkout"
+productPage = "/product"
+basketComponent = "ShopBasket"
+basketPartial = "ShopBasket::default"
+==
+<!DOCTYPE html>
+<html>
+<head>
+    {% partial 'common/meta' %}
+</head>
+<body>
+<header>
+    {% partial 'common/header-top' %}
+    {% partial 'common/nav' %}
+</header>
+
+<section id="content">
+    {% page %}
+</section>
+
+<footer id="footer">
+
+</footer>
+
+<div id="copyright">
+
+</div>
+
+</div>
+{% partial 'common/scripts' %}
+
+</body>
+</html>

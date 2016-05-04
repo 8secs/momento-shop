@@ -1,0 +1,18 @@
+filter_type:
+    label: andresrangel.momentoshop::lang.filter_type.label
+    view:
+        form: $/andresrangel/momentoshop/models/filtertype/fields.yaml
+        toolbarButtons: link|unlink
+    manage:
+        form: $/andresrangel/momentoshop/models/filtertype/fields.yaml
+        list: $/andresrangel/momentoshop/models/filtertype/columns.yaml
+products:
+    label: Products
+    view:
+        list: $/andresrangel/momentoshop/models/product/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        showSearch: true
+        recordsPerPage: 10
+        list: $/andresrangel/momentoshop/models/product/columns.yaml
+        form: $/andresrangel/momentoshop/models/product/fields.yaml

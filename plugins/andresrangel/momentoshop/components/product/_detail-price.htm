@@ -1,0 +1,22 @@
+<div class="box">
+
+    <p class="price"> {{ product.price }} &euro;</p>
+
+    <p class="text-center">
+        {% if product.inStock() %}
+    <form
+            data-request="ShopBasket::onAddProduct"
+            data-request-data="id: {{ product.id }}"
+            data-request-update="'ShopBasket::nav-list-basket': '.nav-basket'">
+        <input type="number" name="quantity" placeholder="Qty"
+               min="1" max="9999" value="1"
+               {% if product.outOfStock() %}disabled{% endif %}>
+        <button type="submit" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i> {{ 'Add to cart'|_ }}</button>
+    </form>
+    {% else %}
+    {{ 'Out of Stock'|_ }}
+    {% endif %}
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="{{ 'Add to wishlist'|_ }}"><i class="fa fa-heart-o"></i></button>
+    </p>
+
+</div>

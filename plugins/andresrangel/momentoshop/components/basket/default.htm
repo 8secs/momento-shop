@@ -1,0 +1,29 @@
+<div class="table-responsive cart-products">
+    <table class="table">
+        <thead>
+        <tr>
+            <th colspan="2">{{ 'Product'|_ }}</th>
+            <th>{{ 'Quantity'|_ }}</th>
+            <th>{{ 'Unit Price'|_ }}</th>
+            <th>{{ 'Disccount'|_ }}</th>
+            <th colspan="2">{{ 'Subtotal'|_ }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% if __SELF__.basketCount > 0 %}
+            {% for item in __SELF__.basketItems %}
+                {% partial __SELF__~'::_item' item=item %}
+            {% endfor %}
+        <tr>
+            <td colspan="6">{{ 'Total'|_ }}</td>
+            <td><span class="shop-total">{{ __SELF__.shopCurrency.symbol_left }}{{ __SELF__.basketSubtotal }}</span> {{ __SELF__.shopCurrency.symbol_right }}</td>
+        </tr>
+        <tr>
+            <td colspan="7">{{ 'You currently have'|_ }} {{ ShopBasket.basketCount }} {{ 'item(s) in your cart.'|_ }}</td>
+        </tr>
+        {% else %}
+            <td colspan="7">{{ 'There is no items in your basket.'|_ }} {{ __SELF__.basketItems }}</td>
+        {% endif %}
+        </tbody>
+    </table>
+</div>

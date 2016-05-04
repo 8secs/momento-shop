@@ -1,0 +1,17 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: andresrangel.momentoshop::lang.labels.name
+        searchable: true
+    description:
+        label: andresrangel.momentoshop::lang.labels.description
+        searchable: true
+    created_at:
+        label: andresrangel.momentoshop::lang.labels.created_at
+        type: date
+    updated_at:
+        label: andresrangel.momentoshop::lang.labels.updated_at
+        type: date

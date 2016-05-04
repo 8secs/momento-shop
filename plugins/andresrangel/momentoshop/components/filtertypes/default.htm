@@ -1,0 +1,44 @@
+{% set filterTypes = __SELF__.filter_types %}
+{% for type in filterTypes %}
+    {% if type.filters.count > 0 %}
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                {{ type.name }}
+                <a  class="btn btn-xs btn-danger pull-right clear-filter" href="#"><i class="fa fa-times-circle"></i> <span class="hidden-sm">{{ 'Clear'|_ }}</span></a>
+            </h3>
+
+        </div>
+        <div class="panel-body">
+
+            <form id="filterForm" data-request="onFilterSubmit"
+                    data-request-update="'Products::product-list': '.products' ">
+                <div class="form-group">
+                    {% for filter in type.filters %}
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="{{ filter.id }}">{{ filter.name }} ({{ filter.products.count }})
+                            </label>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div><p id="result"></p></div>
+
+                <button class="btn btn-default btn-sm btn-template-main"><i class="fa fa-pencil"></i> {{ 'Apply'|_ }}</button>
+
+            </form>
+
+        </div>
+    {% endif %}
+{% endfor %}
+
+{% put scripts %}
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.clear-filter').on('click', function(e){
+            $('#filterForm input').prop('checked', false);
+            e.preventDefault();
+        });
+    });
+</script>
+{% endput %}

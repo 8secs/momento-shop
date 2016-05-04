@@ -1,0 +1,14 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: andresrangel.momentoshop::lang.labels.name
+        span: auto
+    published_at:
+        label: andresrangel.momentoshop::lang.labels.published_at
+        type: datepicker
+        mode: date
+        span: auto
+

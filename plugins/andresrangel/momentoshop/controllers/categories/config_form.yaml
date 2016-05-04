@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Category
+
+# Model Form Field configuration
+form: $/andresrangel/momentoshop/models/category/fields.yaml
+
+# Model Class name
+modelClass: AndresRangel\MomentoShop\Models\Category
+
+# Default redirect location
+defaultRedirect: andresrangel/momentoshop/categories
+
+# Create page
+create:
+    title: andresrangel.momentoshop::lang.category.create_title
+    redirect: andresrangel/momentoshop/categories/update/:id
+    redirectClose: andresrangel/momentoshop/categories
+
+# Update page
+update:
+    title: andresrangel.momentoshop::lang.category.create_title
+    redirect: andresrangel/momentoshop/categories
+    redirectClose: andresrangel/momentoshop/categories
+
+# Preview page
+preview:
+    title: andresrangel.momentoshop::lang.category.preview_title

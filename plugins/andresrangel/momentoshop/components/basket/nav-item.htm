@@ -1,0 +1,21 @@
+<li class="ocshop-row-{{ item.rowid }}">
+    <span class="item">
+        <span class="item-left">
+            <img src="{{ item.picture.getThumb(50,50) }}" alt="{{ item.name }}" />
+            <span class="item-info">
+                <span>{{ item.name }}</span>
+                <span>{{ __SELF__.shopCurrency.symbol_left }}{{ item.price }} {{ __SELF__.shopCurrency.symbol_right }}</span>
+            </span>
+        </span>
+        <span class="item-right">
+            <button type="submit" class="btn btn-xs btn-danger pull-right"
+                    data-request="{{ __SELF__ }}::onRemoveProduct"
+                    data-request-data="row_id: '{{ item.rowid }}'"
+                    data-request-update="'ShopBasket::nav-list-basket': '.nav-basket',
+                                'ShopBasket::default': '.cart-products',
+                                'ShopBasket::_order-summary': '.order-summary'">
+                <i class="fa fa-trash-o"></i>
+            </button>
+        </span>
+    </span>
+</li>

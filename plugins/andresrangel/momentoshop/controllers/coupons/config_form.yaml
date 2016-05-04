@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Coupon
+
+# Model Form Field configuration
+form: $/andresrangel/momentoshop/models/coupon/fields.yaml
+
+# Model Class name
+modelClass: AndresRangel\MomentoShop\Models\Coupon
+
+# Default redirect location
+defaultRedirect: andresrangel/momentoshop/coupons
+
+# Create page
+create:
+    title: andresrangel.momentoshop::lang.coupon.create_title
+    redirect: andresrangel/momentoshop/coupons/update/:id
+    redirectClose: andresrangel/momentoshop/coupons
+
+# Update page
+update:
+    title: andresrangel.momentoshop::lang.coupon.update_title
+    redirect: andresrangel/momentoshop/coupons
+    redirectClose: andresrangel/momentoshop/coupons
+
+# Preview page
+preview:
+    title: andresrangel.momentoshop::lang.coupon.preview_title

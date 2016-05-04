@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Product
+
+# Model Form Field configuration
+form: $/andresrangel/momentoshop/models/product/fields.yaml
+
+# Model Class name
+modelClass: AndresRangel\MomentoShop\Models\Product
+
+# Default redirect location
+defaultRedirect: andresrangel/momentoshop/products
+
+# Create page
+create:
+    title: andresrangel.momentoshop::lang.product.create_title
+    redirect: andresrangel/momentoshop/products/update/:id
+    redirectClose: andresrangel/momentoshop/products
+
+# Update page
+update:
+    title: andresrangel.momentoshop::lang.project.update_title
+    redirect: andresrangel/momentoshop/products
+    redirectClose: andresrangel/momentoshop/products
+
+# Preview page
+preview:
+    title: andresrangel.momentoshop::lang.product.create_title

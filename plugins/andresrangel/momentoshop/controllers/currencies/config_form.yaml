@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Currency
+
+# Model Form Field configuration
+form: $/andresrangel/momentoshop/models/currency/fields.yaml
+
+# Model Class name
+modelClass: AndresRangel\MomentoShop\Models\Currency
+
+# Default redirect location
+defaultRedirect: andresrangel/momentoshop/currencies
+
+# Create page
+create:
+    title: andresrangel.momentoshop::lang.currency.create_title
+    redirect: andresrangel/momentoshop/currencies/update/:id
+    redirectClose: andresrangel/momentoshop/currencies
+
+# Update page
+update:
+    title: andresrangel.momentoshop::lang.currency.update_title
+    redirect: andresrangel/momentoshop/currencies
+    redirectClose: andresrangel/momentoshop/currencies
+
+# Preview page
+preview:
+    title: andresrangel.momentoshop::lang.currency.preview_title

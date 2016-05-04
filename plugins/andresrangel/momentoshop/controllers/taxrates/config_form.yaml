@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Tax Rate
+
+# Model Form Field configuration
+form: $/andresrangel/momentoshop/models/taxrate/fields.yaml
+
+# Model Class name
+modelClass: AndresRangel\MomentoShop\Models\TaxRate
+
+# Default redirect location
+defaultRedirect: andresrangel/momentoshop/taxrates
+
+# Create page
+create:
+    title: andresrangel.momentoshop::lang.tax_rate.create_title
+    redirect: andresrangel/momentoshop/taxrates/update/:id
+    redirectClose: andresrangel/momentoshop/taxrates
+
+# Update page
+update:
+    title: andresrangel.momentoshop::lang.tax_rate.update_title
+    redirect: andresrangel/momentoshop/taxrates
+    redirectClose: andresrangel/momentoshop/taxrates
+
+# Preview page
+preview:
+    title: andresrangel.momentoshop::lang.tax_rate.preview_title

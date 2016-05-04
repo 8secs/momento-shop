@@ -1,0 +1,47 @@
+[viewBag]
+
+==
+<!-- *** TOP ***
+_________________________________________________________ -->
+<div id="top">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-5">
+                <p class="hidden-sm hidden-xs">{% content 'contact/top-contact.htm' %}</p>
+                <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fa fa-phone"></i></a>  <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+                </p>
+            </div>
+            <div class="col-xs-7 pull-right">
+                <div class="social">
+                    <a href="" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
+                    <a href="" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
+                    <a href="" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
+                    <a href="mailto:" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+                </div>
+
+                <div class="login">
+                    {% if not user %}
+                    <a href="{{ 'account'|page }}"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">{{ 'Sign in'|_ }}</span></a>
+                    {% else %}
+                    <a href="#" data-request="onLogout" ><i class="fa fa-sign-out"></i> <span class="hidden-xs text-uppercase">{{ 'Log out'|_ }}</span></a>
+                    {% endif %}
+                    <a href="customer-register.html" ><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">{{ 'Sign up'|_ }}</span></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- *** TOP END *** -->
+
+<div class="row">
+    <div class="container">
+        <div class="col-xs-4">
+            <img src="{{ 'assets/images/logo.png'|theme }}" width="160" alt="{{ this.page.title }}" />
+        </div>
+        <div class="col-xs-8 pull-right shopping-basket">
+            {% partial 'ShopBasket::nav-list-basket' %}
+        </div>
+    </div>
+</div>

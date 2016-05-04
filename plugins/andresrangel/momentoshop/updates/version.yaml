@@ -1,0 +1,23 @@
+1.0.1: First version of MomentoShop
+1.0.2:
+  - Create Models of the Momento Shop
+  - create_categories_table.php
+  - create_coupons_table.php
+  - create_currencies_table.php
+  - create_customers_table.php
+  - create_filter_types_table.php
+  - create_filters_table.php
+  - create_geo_zones_table.php
+  - create_pivots_table.php
+  - create_shippings_table.php
+  - create_tax_rates_table.php
+  - seed_spain_states_table.php
+  - create_products_table.php
+1.0.3:
+  - Seed Spain states and all tables
+  - seed_spain_states_table.php
+  - seed_all_table.php
+1.0.4:
+  - create user addresses table
+  - create_addresses_table.php
+

@@ -1,0 +1,120 @@
+/*!
+ * Start Bootstrap - Shop Homepage HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    /*padding-top: 10px;  Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+#top {
+    background: #555555;
+    color: #eeeeee;
+    padding: 10px 0;
+}
+#top p {
+    margin: 0;
+    font-size: 12px;
+    padding-left: 15px;
+}
+#top .social {
+    float: right;
+    text-align: right;
+}
+#top .social a {
+    color: #999999;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: bottom;
+}
+#top .social a:hover {
+    color: #fff;
+}
+#top .social a:hover.facebook {
+    background-color: #4460ae;
+}
+#top .social a:hover.gplus {
+    background-color: #c21f25;
+}
+#top .social a:hover.twitter {
+    background-color: #3cf;
+}
+#top .social a:hover.instagram {
+    background-color: #cd4378;
+}
+#top .social a:hover.email {
+    background-color: #4a7f45;
+}
+#top .login {
+    float: right;
+}
+#top .login a {
+    font-size: 12px;
+    color: #eeeeee;
+    margin-right: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.10em;
+}
+
+.shopping-basket { margin-top: 15px; }
+
+#shop-demo-navbar-collapse{
+    padding-left: 0;
+}
+
+.breadcrumb {
+    margin: 10px 0;
+}
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 130px;
+    overflow: hidden;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+footer {
+    margin: 50px 0;
+}

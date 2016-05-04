@@ -1,0 +1,28 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: andresrangel.momentoshop::lang.labels.name
+        span: auto
+    published_at:
+        label: andresrangel.momentoshop::lang.labels.published_at
+        type: datepicker
+        mode: date
+        span: auto
+
+tabs:
+    fields:
+        filter_type:
+            label: andresrangel.momentoshop::lang.filter_types.menu_label
+            type: partial
+            path: field_filter_type
+            span: auto
+            tab: andresrangel.momentoshop::lang.filter_types.menu_label
+        products:
+            label: andresrangel.momentoshop::lang.products.menu_label
+            type: partial
+            path: field_products
+            span: auto
+            tab: andresrangel.momentoshop::lang.products.menu_label

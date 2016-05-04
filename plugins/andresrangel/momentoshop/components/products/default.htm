@@ -1,0 +1,24 @@
+{% set products = __SELF__.products %}
+{% set noProductMessage = __SELF__.noProductMessage %}
+<div class="row products">
+    {% partial __SELF__ ~ "::product-list" products = products noProductMessage = noProductMessage %}
+</div>
+<!--
+----------- BANNERS ------------------
+<div class="row">
+
+    <div class="col-md-12 banner">
+        <a href="#">
+            <img src="{{ 'banner2.jpg'|media }}" alt="" class="img-responsive">
+        </a>
+    </div>
+
+</div>
+-->
+
+<div class="pages">
+    <p class="loadMore">
+        <a href="#" class="btn btn-template-main"><i class="fa fa-chevron-down"></i> {{ 'Load more'|_ }}</a>
+    </p>
+    {{ products.render|raw }}
+</div>

@@ -1,0 +1,20 @@
+products:
+    label: Products
+    view:
+        list: $/andresrangel/momentoshop/models/product/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        showSearch: true
+        recordsPerPage: 10
+        list: $/andresrangel/momentoshop/models/product/columns.yaml
+        form: $/andresrangel/momentoshop/models/product/fields.yaml
+categories:
+    label: andresrangel.momentoshop::lang.categories.menu_label
+    view:
+        list: $/andresrangel/momentoshop/models/category/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        showSearch: true
+        recordsPerPage: 10
+        list: $/andresrangel/momentoshop/models/category/columns.yaml
+        form: $/andresrangel/momentoshop/models/category/fields.yaml

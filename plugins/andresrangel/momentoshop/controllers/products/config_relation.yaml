@@ -1,0 +1,24 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+categories:
+    label: andresrangel.momentoshop::lang.categories.menu_label
+    view:
+        list: $/andresrangel/momentoshop/models/category/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        showSearch: true
+        recordsPerPage: 10
+        list: $/andresrangel/momentoshop/models/category/columns.yaml
+        form: $/andresrangel/momentoshop/models/category/fields.yaml
+filters:
+    label: andresrangel.momentoshop::lang.filters.menu_label
+    view:
+        list: $/andresrangel/momentoshop/models/filter/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        showSearch: true
+        recordsPerPage: 10
+        list: $/andresrangel/momentoshop/models/filter/columns.yaml
+        form: $/andresrangel/momentoshop/models/filter/fields.yaml

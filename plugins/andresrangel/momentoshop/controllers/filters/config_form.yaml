@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: andresrangel.mycompamy::lang.filter.label
+
+# Model Form Field configuration
+form: $/andresrangel/momentoshop/models/filter/fields.yaml
+
+# Model Class name
+modelClass: AndresRangel\MomentoShop\Models\Filter
+
+# Default redirect location
+defaultRedirect: andresrangel/momentoshop/filters
+
+# Create page
+create:
+    title: andresrangel.momentoshop::lang.filter.create_title
+    redirect: andresrangel/momentoshop/filters/update/:id
+    redirectClose: andresrangel/momentoshop/filters
+
+# Update page
+update:
+    title: andresrangel.momentoshop::lang.filter.update_title
+    redirect: andresrangel/momentoshop/filters
+    redirectClose: andresrangel/momentoshop/filters
+
+# Preview page
+preview:
+    title: andresrangel.momentoshop::lang.filter.preview_title

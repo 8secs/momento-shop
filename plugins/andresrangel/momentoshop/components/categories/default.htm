@@ -1,0 +1,6 @@
+{% if __SELF__.categories %}
+    {% partial __SELF__ ~ "::items"
+    categories = __SELF__.categories
+    currentCategorySlug = __SELF__.currentCategorySlug
+    %}
+{% endif %}

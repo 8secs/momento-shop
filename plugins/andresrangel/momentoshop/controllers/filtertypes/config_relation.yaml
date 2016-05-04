@@ -1,0 +1,8 @@
+filters:
+    label: andresrangel.momentoshop::lang.filters.menu_label
+    manage:
+        form: $/andresrangel/momentoshop/models/filter/fields.yaml
+        list: $/andresrangel/momentoshop/models/filter/columns.yaml
+    view:
+        list: $/andresrangel/momentoshop/models/filter/columns.yaml
+        toolbarButtons: create|delete

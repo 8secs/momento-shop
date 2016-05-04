@@ -1,0 +1,22 @@
+[viewBag]
+==
+<ul class="breadcrumb pull-right">
+    <li><a href="{{ '/'|app }}">{{ 'Home'|_ }}</a></li>
+    {% if product %}
+    <li><a href="{{ 'shop'|app }}">{{ 'products'|_ }}</a>
+        {% if product.categories %}
+        {% for category in product.categories %}
+    <li><a href="{{ 'categories'|app }}/{{ category.slug }}">{{ category.name }}</a></li>
+    {% endfor %}
+    {% endif %}
+
+    <li>{{ product.name }}</li>
+    {% elseif category %}
+    {% if category.parent %}
+    <li><a href="{{ 'categories'|app }}/{{ category.parent.slug }}">{{ category.parent.name }}</a></li>
+    {% endif %}
+    <li>{{ category.name }}</li>
+    {% else %}
+    <li>{{ this.page.title }}</li>
+    {% endif %}
+</ul>

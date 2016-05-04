@@ -1,0 +1,9 @@
+{% set thumbs = product.pictures %}
+
+{% for thumb in thumbs %}
+    <div class="col-xs-4">
+        <a href="{{ thumb.getPath() }}" class="thumb">
+            <img src="{{ thumb.getPath() }}" alt="" class="img-responsive">
+        </a>
+    </div>
+{% endfor %}

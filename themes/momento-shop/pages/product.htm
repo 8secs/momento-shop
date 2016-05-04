@@ -1,0 +1,88 @@
+title = "Product"
+url = "/product/:slug"
+layout = "default"
+is_hidden = 0
+
+[Categories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "categories"
+
+[Product]
+maxItems = 20
+slug = "{{ :slug }}"
+categoryPage = "categories"
+orderBy = "id"
+sort = "desc"
+
+[FilterTypes]
+orderBy = "id"
+sort = "desc"
+categoryPage = "categories"
+==
+<div class="container">
+    <div class="row">
+        <!-- *** LEFT COLUMN ***
+			_________________________________________________________ -->
+
+        <div class="col-sm-9">
+            {% content 'product/lead.htm' %}
+            <p class="goToDescription"><a href="#details" class="scroll-to text-uppercase">{{ 'Scroll to product details, material & care and sizing'|_ }}</a></p>
+
+            {% component 'Product' %}
+
+            <div class="box social" id="product-social">
+                {% partial 'product/social' %}
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="box text-uppercase">
+                        <h3>{{ 'You may also like these products'|_ }}</h3>
+                    </div>
+                </div>
+                {% partial 'Product::related-products' %}
+            </div>
+        </div>
+        <!-- /.col-md-9 -->
+
+        <!-- *** LEFT COLUMN END *** -->
+
+        <!-- *** RIGHT COLUMN ***
+			_________________________________________________________ -->
+
+        <div class="col-sm-3">
+
+            <!-- *** MENUS AND FILTERS ***
+_________________________________________________________ -->
+            <div class="panel panel-default sidebar-menu">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ Product.product.name }}</h3>
+                </div>
+
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked category-menu">
+                        {% partial 'Product::_detail-price' %}
+                    </ul>
+
+                </div>
+            </div>
+
+
+            <!-- *** MENUS AND FILTERS END *** -->
+
+            <div class="banner">
+                <a href="shop-category.html">
+                    <img src="{{ 'banner.jpg'|media }}" alt="sales 2014" class="img-responsive">
+                </a>
+            </div>
+            <!-- /.banner -->
+
+        </div>
+        <!-- /.col-md-3 -->
+
+        <!-- *** RIGHT COLUMN END *** -->
+
+    </div>
+</div>

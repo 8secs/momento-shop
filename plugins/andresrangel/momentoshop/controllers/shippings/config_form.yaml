@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Shipping
+
+# Model Form Field configuration
+form: $/andresrangel/momentoshop/models/shipping/fields.yaml
+
+# Model Class name
+modelClass: AndresRangel\MomentoShop\Models\Shipping
+
+# Default redirect location
+defaultRedirect: andresrangel/momentoshop/shippings
+
+# Create page
+create:
+    title: andresrangel.momentoshop::lang.shipping.create_title
+    redirect: andresrangel/momentoshop/shippings/update/:id
+    redirectClose: andresrangel/momentoshop/shippings
+
+# Update page
+update:
+    title: andresrangel.momentoshop::lang.shipping.update_title
+    redirect: andresrangel/momentoshop/shippings
+    redirectClose: andresrangel/momentoshop/shippings
+
+# Preview page
+preview:
+    title: andresrangel.momentoshop::lang.shipping.preview_title

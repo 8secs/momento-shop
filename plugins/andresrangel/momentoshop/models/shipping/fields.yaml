@@ -1,0 +1,24 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: andresrangel.momentoshop::lang.labels.name
+        required: true
+    cost:
+        label: andresrangel.momentoshop::lang.labels.cost
+        span: auto
+        comment: andresrangel.momentoshop::lang.labels.cost-message
+    total:
+        label: andresrangel.momentoshop::lang.labels.total
+        span: auto
+        comment: andresrangel.momentoshop::lang.labels.total-message
+    geo_zone:
+        label: andresrangel.momentoshop::lang.geo_zones.menu_label
+        type: recordfinder
+        list: ~/plugins/rainlab/location/models/country/columns.yaml
+        prompt: andresrangel.momentoshop::lang.geo_zones.record_finder
+        nameFrom: name
+        span: auto
+        tab: andresrangel.momentoshop::lang.geo_zones.menu_label

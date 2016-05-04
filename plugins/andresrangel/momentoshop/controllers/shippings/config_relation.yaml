@@ -1,0 +1,8 @@
+geo_zone:
+    label: andresrangel.momentoshop::lang.geo_zone.label
+    view:
+        form: $/andresrangel/momentoshop/models/geozone/fields.yaml
+        toolbarButtons: link|unlink
+    manage:
+        form: $/andresrangel/momentoshop/models/geozone/fields.yaml
+        list: $/andresrangel/momentoshop/models/geozone/columns.yaml

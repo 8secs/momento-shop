@@ -1,0 +1,23 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: andresrangel.momentoshop::lang.labels.name
+    description:
+        type: richeditor
+        label: andresrangel.momentoshop::lang.labels.description
+        tab: andresrangel.momentoshop::lang.labels.description
+    countries:
+        label: andresrangel.momentoshop::lang.labels.countries
+        type: partial
+        path: field_countries
+        span: auto
+        tab: andresrangel.momentoshop::lang.labels.countries
+    states:
+        label: andresrangel.momentoshop::lang.labels.states
+        type: partial
+        path: field_states
+        span: auto
+        tab: andresrangel.momentoshop::lang.labels.countries

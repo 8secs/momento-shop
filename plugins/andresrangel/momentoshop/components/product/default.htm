@@ -1,0 +1,24 @@
+{% set product = __SELF__.product %}
+
+<div class="row" id="productMain">
+    <div class="col-sm-6">
+        <div id="mainImage">
+            <img src="{{ product.picture.getPath() }}" alt="{{ product.name }}" class="img-responsive">
+        </div>
+
+    </div>
+    <div class="col-sm-6">
+
+        <div class="row" id="thumbs">
+            {% partial __SELF__ ~ "::thumbs-product" %}
+        </div>
+    </div>
+
+</div>
+
+
+<div class="box" id="details">
+    <p>
+    <h4>{{ 'Product details'|_ }}</h4>
+    {{ product.description|raw }}
+</div>

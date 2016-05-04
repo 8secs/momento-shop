@@ -1,0 +1,84 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: andresrangel.momentoshop::lang.labels.name
+        span: auto
+    owner:
+        label: andresrangel.momentoshop::lang.labels.owner
+        span: auto
+    address:
+        type: richeditor
+        span: auto
+        label: andresrangel.momentoshop::lang.labels.address
+    logo:
+        label: andresrangel.momentoshop::lang.labels.logo
+        type: fileupload
+        mode: image
+        imageHeight: 260
+        imageWidth: 260
+        span: right
+        tab: andresrangel.momentoshop::lang.labels.content
+
+tabs:
+  fields:
+      email:
+          label: andresrangel.momentoshop::lang.labels.email
+          span: auto
+          tab: andresrangel.momentoshop::lang.labels.content
+      phone:
+          type: text
+          span: auto
+          label: andresrangel.momentoshop::lang.labels.phone
+          tab: andresrangel.momentoshop::lang.labels.content
+      fax:
+          type: text
+          span: auto
+          label: andresrangel.momentoshop::lang.labels.fax
+          tab: andresrangel.momentoshop::lang.labels.content
+      opening-times:
+          type: richeditor
+          label: andresrangel.momentoshop::lang.labels.opening-times
+          tab: andresrangel.momentoshop::lang.labels.content
+      comments:
+          type: richeditor
+          label: andresrangel.momentoshop::lang.labels.comments
+          tab: andresrangel.momentoshop::lang.labels.content
+      country:
+          type: dropdown
+          span: auto
+          label: andresrangel.momentoshop::lang.labels.country
+          tab: andresrangel.momentoshop::lang.labels.local
+      state:
+          type: dropdown
+          span: auto
+          dependsOn: country
+          label: andresrangel.momentoshop::lang.labels.state
+          tab: andresrangel.momentoshop::lang.labels.local
+      locale:
+          type: dropdown
+          span: auto
+          label: andresrangel.momentoshop::lang.labels.locale
+          tab: andresrangel.momentoshop::lang.labels.local
+      currency:
+          type: dropdown
+          span: auto
+          label: andresrangel.momentoshop::lang.currency.label
+          tab: andresrangel.momentoshop::lang.labels.local
+      length:
+          type: dropdown
+          span: auto
+          label: andresrangel.momentoshop::lang.labels.length
+          tab: andresrangel.momentoshop::lang.labels.local
+      weight:
+          type: dropdown
+          span: auto
+          label: andresrangel.momentoshop::lang.labels.weight
+          tab: andresrangel.momentoshop::lang.labels.local
+      tax:
+          type: dropdown
+          span: auto
+          label: andresrangel.momentoshop::lang.labels.taxes
+          tab: andresrangel.momentoshop::lang.labels.taxes

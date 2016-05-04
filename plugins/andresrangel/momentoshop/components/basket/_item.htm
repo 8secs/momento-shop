@@ -1,0 +1,18 @@
+<tr class="shop-row{{ item.rowid }}">
+    <td><img src="{{ item.picture.getThumb(150,150) }}" alt="{{ item.name }}" /></td>
+    <td><a href="{{ '/product'|page }}/{{ item.slug }}">{{ item.name }}</a></td>
+    <td><input id="qty-{{ item.rowid }}" name="qty-{{ item.rowid }}" type="number" value="{{ item.qty }}" class="form-control"></td>
+    <td>{{ __SELF__.shopCurrency.symbol_left }}{{ item.price }}{{ __SELF__.shopCurrency.symbol_right }}</td>
+    <td>{{ __SELF__.shopCurrency.symbol_left }}0.00{{ __SELF__.shopCurrency.symbol_right }}</td>
+    <td>{{ __SELF__.shopCurrency.symbol_left }}{{ item.subtotal }}{{ __SELF__.shopCurrency.symbol_right }}</td>
+    <td>
+        <button type="submit" class="btn btn-xs btn-default"
+                data-request="{{ __SELF__ }}::onRemoveProduct"
+                data-request-data="row_id: '{{ item.rowid }}'"
+                data-request-update="'ShopBasket::nav-list-basket': '.nav-basket',
+                                'ShopBasket::default': '.cart-products',
+                                'ShopBasket::_order-summary': '.order-summary'">
+            <i class="fa fa-trash-o"></i>
+        </button>
+    </td>
+</tr>

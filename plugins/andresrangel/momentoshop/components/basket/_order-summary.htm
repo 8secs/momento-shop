@@ -1,0 +1,22 @@
+<div class="table-responsive order-summary">
+    <table class="table">
+        <tbody>
+        <tr>
+            <td>{{ 'Order subtotal'|_ }}</td>
+            <th style="text-align: right">{{ __SELF__.shopCurrency.symbol_left }}{{ __SELF__.basketSubtotal|number_format(2) }}{{ __SELF__.shopCurrency.symbol_right }}</th>
+        </tr>
+        <tr>
+            <td>{{ 'Shipping and handling'|_ }}</td>
+            <th style="text-align: right">{{ __SELF__.shopCurrency.symbol_left }}{{ __SELF__.selectedShippingRate|number_format(2) }}{{ __SELF__.shopCurrency.symbol_right }}</th>
+        </tr>
+        <tr>
+            <td>{{ 'Tax'|_ }}</td>
+            <th style="text-align: right">{{ __SELF__.shopCurrency.symbol_left }}{{ __SELF__.basketTaxRate|number_format(2) }}{{ __SELF__.shopCurrency.symbol_right }}</th>
+        </tr>
+        <tr class="total">
+            <td>{{ 'Total'|_ }}</td>
+            <th style="text-align: right">{{ __SELF__.shopCurrency.symbol_left }}{{ __SELF__.basketTotal|number_format(2) }}{{ __SELF__.shopCurrency.symbol_right }}</th>
+        </tr>
+        </tbody>
+    </table>
+</div>

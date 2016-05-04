@@ -1,0 +1,47 @@
+{% for params in products %}
+<div class="col-sm-4 col-lg-4 col-md-4">
+    <div class="product">
+        <div class="thumbnail image">
+            <a href="{{ 'product'|page({ slug: params.slug }) }}">
+                <img src="{{ params.picture.getPath() }}" alt="{{ params.name }}" class="img-responsive image{{ loop.index }}">
+            </a>
+            <div class="caption">
+                <h4 class="pull-right">{{ ShopBasket.shopCurrency.symbol_left }}{{ params.price }}{{ ShopBasket.shopCurrency.symbol_right }}</h4>
+                <h4><a href="{{ '/product'|page({ slug: params.slug }) }}">{{ params.name}}</a></h4>
+            </div>
+            <div class="ratings">
+                <p class="pull-right">12 {{ 'reviews'|_ }}</p>
+                <p>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star-empty"></span>
+                </p>
+            </div>
+            <div class="buttons text-center">
+                <form data-request="ShopBasket::onAddProduct"
+                      data-request-data="id: {{ params.id }}"
+                      data-request-update="'ShopBasket::nav-list-basket': '.nav-basket'">
+                    <p class="buttons">
+                        <a href="{{ 'product'|page({ slug: params.slug }) }}" class="btn btn-default"><i class="fa fa-eye"></i>{{ 'View detail'|_ }}</a>
+                        {% if params.inStock() %}
+                        <button type="submit" class="btn btn-template-main"><i class="fa fa-shopping-cart"></i>{{ 'Add to cart'|_ }}</button>
+                        {% else %}
+                        {{ 'Out of Stock'|_ }}
+                        {% endif %}
+                    </p>
+                </form>
+            </div>
+        </div>
+        <!-- /.image -->
+    </div>
+    <!-- /.product -->
+</div>
+{% else %}
+<div class="col-md-4 col-sm-6">
+    <div class="product">
+        <h3>{{ noProductsMessage }}</h3>
+    </div>
+</div>
+{% endfor %}

@@ -1,0 +1,81 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: andresrangel.momentoshop::lang.labels.name
+        span: auto
+        type: text
+    slug:
+        label: andresrangel.momentoshop::lang.labels.slug
+        span: right
+        required: true
+        preset:
+            field: name
+            type: slug
+    published_at:
+        label: andresrangel.momentoshop::lang.labels.published_at
+        type: datepicker
+        mode: date
+        span: auto
+
+tabs:
+  fields:
+    description:
+        type: richeditor
+        size: huge
+        label: andresrangel.momentoshop::lang.labels.description
+        span: auto
+        tab: andresrangel.momentoshop::lang.labels.description
+    picture:
+        label: andresrangel.momentoshop::lang.labels.picture
+        type: fileupload
+        mode: image
+        span: auto
+        imageHeight: 260
+        imageWidth: 260
+        tab: andresrangel.momentoshop::lang.labels.description
+    modelo:
+        label: Model
+        span: left
+        tab: andresrangel.momentoshop::lang.labels.description
+    is_stockable:
+        label: andresrangel.momentoshop::lang.labels.stockable
+        type: switch
+        span: right
+        tab: andresrangel.momentoshop::lang.labels.description
+    is_featured:
+        label: andresrangel.momentoshop::lang.labels.featured
+        type: switch
+        span: right
+        tab: andresrangel.momentoshop::lang.labels.description
+    stock:
+        label: andresrangel.momentoshop::lang.labels.quantity
+        type: number
+        span: left
+        tab: andresrangel.momentoshop::lang.labels.description
+    price:
+        label: andresrangel.momentoshop::lang.labels.price
+        type: number
+        span: left
+        cssClass: padded
+        tab: andresrangel.momentoshop::lang.labels.description
+    categories:
+        label: andresrangel.momentoshop::lang.categories.menu_label
+        type: partial
+        path: field_categories
+        tab: andresrangel.momentoshop::lang.categories.menu_label
+    filters:
+        label: andresrangel.momentoshop::lang.filters.menu_label
+        type: partial
+        path: field_filters
+        tab: andresrangel.momentoshop::lang.filters.menu_label
+    pictures:
+        label: andresrangel.momentoshop::lang.labels.pictures
+        type: fileupload
+        mode: image
+        span: auto
+        imageHeight: 260
+        imageWidth: 260
+        tab: andresrangel.momentoshop::lang.labels.attachments

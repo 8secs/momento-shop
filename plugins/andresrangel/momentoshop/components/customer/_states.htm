@@ -1,0 +1,10 @@
+<div class="form-group" id="states-div">
+    {% set states = __SELF__.states %}
+    <label for="states">States</label>
+    <select id="states" name="states" class="form-control">
+        <option value="0">{{ 'Select your state'|__ }}</option>
+        {% for state in states %}
+        <option value="{{ state.id }}">{{ state.name|raw }}</option>
+        {% endfor %}
+    </select>
+</div>

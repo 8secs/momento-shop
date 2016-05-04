@@ -1,0 +1,61 @@
+title = "Categories"
+url = "/categories/:slug"
+layout = "default"
+is_hidden = 0
+
+[Products]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+productsPerPage = 10
+noProductsMessage = "No products found"
+sortOrder = "published_at desc"
+categoryPage = "categories"
+productPage = "product"
+
+[Categories]
+slug = "{{ :slug }}"
+displayEmpty = 0
+categoryPage = "categories"
+
+[FilterTypes]
+orderBy = "id"
+sort = "desc"
+categoryPage = "categories"
+==
+<!---->
+<div class="container">
+    <div class="col-md-9">
+        {% component 'Products' %}
+    </div>
+    <div class="col-md-3">
+        <!-- *** MENUS AND FILTERS ***
+_________________________________________________________ -->
+        <div class="panel panel-default sidebar-menu">
+
+            <div class="panel-heading">
+                <h3 class="panel-title">{{ 'Categories'|_ }}</h3>
+            </div>
+
+            <div class="panel-body">
+                <ul class="nav nav-pills nav-stacked category-menu">
+                    {% partial 'Categories::items' %}
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="panel panel-default sidebar-menu">
+            {% component 'FilterTypes' %}
+        </div>
+
+
+        <!-- *** MENUS AND FILTERS END *** -->
+
+        <div class="banner">
+            <a href="shop-category.html">
+                <img src="{{ 'banner.jpg'|media }}" alt="sales 2014" class="img-responsive">
+            </a>
+        </div>
+        <!-- /.banner -->
+    </div>
+</div>

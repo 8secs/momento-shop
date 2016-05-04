@@ -1,0 +1,20 @@
+countries:
+    label: Countries
+    view:
+        list: ~/plugins/rainlab/location/models/country/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        showSearch: true
+        recordsPerPage: 10
+        list: ~/plugins/rainlab/location/models/country/columns.yaml
+        form: ~/plugins/rainlab/location/models/country/fields.yaml
+states:
+    label: States
+    view:
+        list: ~/plugins/rainlab/location/models/state/columns.yaml
+        toolbarButtons: add|remove
+    manage:
+        showSearch: true
+        recordsPerPage: 10
+        list: ~/plugins/rainlab/location/models/state/columns.yaml
+        form: ~/plugins/rainlab/location/models/state/fields.yaml

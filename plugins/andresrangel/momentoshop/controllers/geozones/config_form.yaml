@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Geo State
+
+# Model Form Field configuration
+form: $/andresrangel/momentoshop/models/geozone/fields.yaml
+
+# Model Class name
+modelClass: AndresRangel\MomentoShop\Models\GeoZone
+
+# Default redirect location
+defaultRedirect: andresrangel/momentoshop/geozones
+
+# Create page
+create:
+    title: andresrangel.momentoshop::lang.geo_zone.create_title
+    redirect: andresrangel/momentoshop/geozones/update/:id
+    redirectClose: andresrangel/momentoshop/geozones
+
+# Update page
+update:
+    title: andresrangel.momentoshop::lang.geo_zone.update_title
+    redirect: andresrangel/momentoshop/geozones
+    redirectClose: andresrangel/momentoshop/geozones
+
+# Preview page
+preview:
+    title: andresrangel.momentoshop::lang.geo_zone.preview_title

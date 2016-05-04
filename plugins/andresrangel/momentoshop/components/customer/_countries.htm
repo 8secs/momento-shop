@@ -1,0 +1,26 @@
+
+<label for="countries">Country</label>
+<select id="countries" name="countries" class="form-control" onChange="onCountryChange()">
+    <option value="0">{{ 'Select your country'|__ }}</option>
+    {% for country in countries %}
+
+    {% if country.id == user.customer.addresses[0].country_id %}
+    <option value="{{ country.id }}" selected>{{ country.name }}</option>
+    {% else %}
+    <option value="{{ country.id }}">{{ country.name }}</option>
+    {% endif %}
+    {% endfor %}
+</select>
+
+<form id="countryForm" data-request="onCountryChange" data-request-update="'Customer::_states': '#states-div'">
+    <input type="hidden" name="country" id="country" />
+</form>
+
+{% put scripts %}
+<script type="text/javascript">
+    function onCountryChange(){
+        $('#country').val($('#countries option:selected').val());
+        $('#countryForm').submit();
+    }
+</script>
+{% endput %}
